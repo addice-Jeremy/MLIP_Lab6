@@ -21,7 +21,7 @@ pipeline {
                 pytest
 
                 echo 'Pytest completed successfully'
-                '''  # Removed `exit 1` to prevent failure after fixing the script
+                '''
             }
         }
         stage('Deploy') {
