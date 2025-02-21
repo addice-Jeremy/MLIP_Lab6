@@ -19,7 +19,7 @@ def housing_data_sample():
       'airconditioning':["yes","yes"],	
       'parking':[2,3],
       'prefarea':["yes","no"],	
-      'furnishingstatus':["furnished","unfurnished"]}
+      'furnishingstatus':["furnished","sunfurnished"]}
     )
 
 def test_data_preparation(housing_data_sample):
@@ -38,4 +38,4 @@ def feature_target_sample(housing_data_sample):
 def test_data_split(feature_target_sample):
     return_tuple = data_split(*feature_target_sample)
     # TODO test if the length of return_tuple is 4
-    raise NotImplemented
+    assert len(return_tuple) == 4
